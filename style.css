@@ -1,0 +1,127 @@
+body{
+    background:#ffd500;
+    color: #333333;
+    text-align: center;
+    font-family: Arial;
+    margin-top: 40px;
+}
+
+button{
+    padding: 10px 20px;
+    border: none;
+    background: cyan;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    background: deepskyblue;
+}
+
+body.dark{
+    background-color: rgb(52, 52, 52);
+    color: white;
+}
+
+.about{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+}
+
+.container{
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.project{
+    margin-top: 30px;
+}
+
+.card{
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0.0.0.0.1);
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0.0.0.0.2);
+}
+
+body.dark.card{
+    background: #1e1e1e;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: rgb(8, 197, 222);
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.fade{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.fade.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img{
+    border-radius: 50%;
+}
+
+.tombol-kanan{
+    position: absolute;
+    top: 145px;
+    right: 8px;
+}
+
+.calc-container{
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.calc-container input{
+    padding: 10px;
+    width: 80px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.calc-button{
+    margin-top: 10px;
+}
