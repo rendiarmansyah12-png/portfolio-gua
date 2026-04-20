@@ -1,127 +1,261 @@
-body{
-    background:#ffd500;
-    color: #333333;
-    text-align: center;
-    font-family: Arial;
-    margin-top: 40px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-button{
-    padding: 10px 20px;
-    border: none;
-    background: cyan;
-    cursor: pointer;
-    transition: 0.2s;
+body {
+  background: #ffd500;
+  color: #333333;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 40px;
+  transition: 0.3s;
 }
 
-button:hover{
-    background: deepskyblue;
+body.dark {
+  background-color: #343434;
+  color: white;
 }
 
-body.dark{
-    background-color: rgb(52, 52, 52);
-    color: white;
+button {
+  padding: 10px 20px;
+  border: none;
+  background: cyan;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 5px;
 }
 
-.about{
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid gray;
-    border-radius: 10px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: auto;
+button:hover {
+  background: deepskyblue;
+  transform: scale(1.05);
 }
 
-.container{
-    max-width: 600px;
-    margin: auto;
-    position: relative;
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
 }
 
-.project{
-    margin-top: 30px;
+.card {
+  background: white;
+  color: black;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card{
-    background: white;
-    color: black;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0.0.0.0.1);
+.card:hover {
+  transform: translateY(-5px) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(8, 197, 222, 0.3);
+  transition: all 0.3s ease;
 }
 
-.card:hover{
-    transform: scale(1.03);
-    box-shadow: 0 6px 15px rgba(0.0.0.0.2);
+body.dark .card {
+  background: #1e1e1e;
+  color: white;
 }
 
-body.dark.card{
-    background: #1e1e1e;
-    color: white;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgb(8, 197, 222);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: rgb(8, 197, 222);
-    color: white;
+nav h2 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 20px;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
 }
 
-nav a{
-    color: white;
-    text-decoration: none;
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: 500;
 }
 
-html{
-    scroll-behavior: smooth;
+nav a:hover {
+  opacity: 0.8;
 }
 
-.fade{
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.5s;
+html {
+  scroll-behavior: smooth;
 }
 
-.fade.show{
-    opacity: 1;
-    transform: translateY(0);
+section {
+  margin: 40px 0;
+  padding: 20px;
 }
 
-img{
-    border-radius: 50%;
+section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: rgb(8, 197, 222);
 }
 
-.tombol-kanan{
-    position: absolute;
-    top: 145px;
-    right: 8px;
+body.dark section h2 {
+  color: #4ad9ff;
 }
 
-.calc-container{
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 15px;
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s ease-out;
 }
 
-.calc-container input{
-    padding: 10px;
-    width: 80px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.calc-button{
-    margin-top: 10px;
+img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.tombol-kanan {
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.calc-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-container input {
+  padding: 12px;
+  width: 100%;
+  max-width: 150px;
+  margin: 5px auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.calc-button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.calc-button button {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.skills-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skill-item {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 200px;
+  flex: 1;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.skill-item:hover {
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(8, 197, 222, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-item h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: rgb(8, 197, 222);
+  font-size: 1.1rem;
+}
+
+.skill-item ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.skill-item li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.skill-item li:last-child {
+  border-bottom: none;
+}
+
+body.dark .skill-item {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark .skill-item li {
+  border-bottom-color: #444;
+}
+
+h1, p {
+  transition: 0.3s;
+}
+
+h1 {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+a {
+  color: rgb(8, 197, 222);
+  text-decoration: none;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }

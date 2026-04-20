@@ -1,74 +1,84 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <title>portfolio Gue</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-<body>
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio Gue</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
     <nav>
-        <h2>MyPortfolio</h2>
-        <ul>
-            <li><a href="#about">about</a></li>
-            <li><a href="#project">project</a></li>
-        </ul>
+      <h2>MyPortfolio</h2>
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#project">project</a></li>
+      </ul>
+      <button class="tombol-kanan" onclick="toggleDark()" id="modeBtn">Mode: OFF</button>
     </nav>
-    
-    <button class="tombol-kanan" onclick="toggleDark()"id="modeBtn">Mode:OFF</button>
 
-    <div class="container"> 
+    <div class="container">
+      <h1>Halo gue lagi belajar coding</h1>
+      <p>Ini web pertama gue</p>
 
-        <h1>Halo gue lagi belajar coding</h1>
-        <p>Ini web pertama gue</p>
+      <section id="about" class="fade">
+        <h2>About Me</h2>
+        <p>Halo! Gue Rendi. Perjalanan gue di dunia coding bermula dari rasa penasaran saat ngerjain proyek jam digital di sekolah. Berawal dari banyak nanya ke temen, gue akhirnya malah ketagihan ngulik sendiri secara otodidak. Web ini adalah portfolio sekaligus jurnal belajar gue dari nol sampai sekarang.</p>
+      </section>
 
-    
+      <section id="skills" class="fade">
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <div class="skill-item">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <div class="skill-item">
+            <h3>Tools & Technologies</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Web Development</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <section id="about" class="fade">
-
-            <h2>About Me</h2>
-            <p>Halo! Gue Rendi. Perjalanan gue di dunia coding bermula
-                dari rasa penasaran saat ngerjain proyek jam digital di
-                sekolah. Berawal dari banyak nanya ke temen, gue akhirnya
-                malah ketagihan ngulik sendiri secara otodidak. Web ini adalah
-                portfolio sekaligus jurnal belajar gue dari nol sampai sekarang. 
-            </p>
-    
-        </section>
-
-         <section id="project" class="fade">
-
+      <section id="project" class="fade">
+        <h2>Projects</h2>
         <div class="card">
-            <h3>Dark Mode Website</h3>
-            <p>Website pertama gua pake fitur dark mode</p>
-            <a href="https://github.com" target="_blank">Lihat Project</a>
+          <h3>Dark Mode Website</h3>
+          <p>Website pertama gua pake fitur dark mode</p>
+          <a href="https://github.com" target="_blank">Lihat Project</a>
         </div>
 
         <div class="card">
-            <h3>Interactive Button</h3>
-            <p>Button yang bisa berubah teks</p>
-            <button onclick="alert('Ini button interactive gua')">Lihat</button>
+          <h3>Interactive Button</h3>
+          <p>Button yang bisa berubah teks</p>
+          <button onclick="alert('Ini button interactive gua')">Lihat</button>
         </div>
 
-        <section id="calculator-section"class="about">
-            <h3>Simpel Calculator</h3>
-            <div class="calc-container">
-                <input type="number" id="num1" placeholder="Angka1">
-                    <input type="number" id="num2" placeholder="Angka2">
-                        <div class="calc-button">
-                            <button onclick="hitung('+')">+</button>
-                            <button onclick="hitung('-')">-</button>
-                            <button onclick="hitung('*')">*</button>
-                            <button onclick="hitung('/')">/</button>
-                        </div>
-                    <h4>Hasil:<span id="hasil-hitung">0</span></h4>
-                </div>
-            </section>
-
-        </section>
+        <div class="card">
+          <h3>Simpel Calculator</h3>
+          <div class="calc-container">
+            <input type="number" id="num1" placeholder="Angka 1">
+            <input type="number" id="num2" placeholder="Angka 2">
+            <div class="calc-button">
+              <button onclick="hitung('+')">+</button>
+              <button onclick="hitung('-')">-</button>
+              <button onclick="hitung('*')">*</button>
+              <button onclick="hitung('/')">÷</button>
+            </div>
+            <h4>Hasil: <span id="hasil-hitung">0</span></h4>
+          </div>
+        </div>
+      </section>
 
     </div>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
